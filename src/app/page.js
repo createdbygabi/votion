@@ -194,9 +194,9 @@ export default function Home() {
                       </div>
                       <div className="bg-gray-100 rounded-2xl px-4 py-3 max-w-xs">
                         <p className="text-sm text-gray-700 mb-2">
-                          Sure, I've compiled your notes on the future of AI in
-                          education and saved it with your notes database.
-                          Here's the link:
+                          Sure, I&rsquo;ve compiled your notes on the future of
+                          AI in education and saved it with your notes database.
+                          Here&rsquo;s the link:
                           https://www.notion.so/The-Future-Of-AI-In-Education
                         </p>
                         <span className="text-xs text-gray-500 block">
