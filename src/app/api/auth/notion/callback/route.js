@@ -5,13 +5,34 @@ import { notifyTelegramBot } from "@/lib/telegram";
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const code = searchParams.get("code");
-  const state = searchParams.get("state"); // This contains the Telegram user_id
+  const encodedState = searchParams.get("state"); // This contains the base64 encoded Telegram user_id
 
   if (!code) {
     return NextResponse.redirect(new URL("/auth/error", request.url));
   }
 
+  if (!encodedState) {
+    console.error("Missing state parameter");
+    return NextResponse.redirect(new URL("/auth/error", request.url));
+  }
+
   try {
+    // Decode the base64 encoded state to get the actual Telegram user ID
+    const telegramUserId = parseInt(
+      Buffer.from(encodedState, "base64").toString()
+    );
+
+    if (!telegramUserId || isNaN(telegramUserId)) {
+      console.error(
+        "Invalid state parameter - could not decode Telegram user ID"
+      );
+      return NextResponse.redirect(new URL("/auth/error", request.url));
+    }
+
+    console.log(
+      `🔍 Decoded Telegram user ID: ${telegramUserId} from state: ${encodedState}`
+    );
+
     // Exchange code for token
     const response = await fetch("https://api.notion.com/v1/oauth/token", {
       method: "POST",
@@ -49,7 +70,7 @@ export async function GET(request) {
     // Save to Supabase database
     const { error: dbError } = await supabase.from("notion_connections").upsert(
       {
-        telegram_user_id: state, // From the OAuth state parameter
+        telegram_user_id: telegramUserId, // Decoded Telegram user ID
         notion_access_token: access_token,
         notion_refresh_token: refresh_token,
         notion_bot_id: bot_id,
@@ -71,14 +92,21 @@ export async function GET(request) {
       throw new Error("Failed to save connection data");
     }
 
-    console.log(`✅ Saved Notion connection for Telegram user ${state}`);
+    console.log(
+      `✅ Saved Notion connection for Telegram user ${telegramUserId}`
+    );
 
     // Notify Telegram bot
-    const notificationSent = await notifyTelegramBot(state, workspace_name);
+    const notificationSent = await notifyTelegramBot(
+      telegramUserId,
+      workspace_name
+    );
     if (notificationSent) {
-      console.log(`✅ Telegram notification sent to user ${state}`);
+      console.log(`✅ Telegram notification sent to user ${telegramUserId}`);
     } else {
-      console.warn(`⚠️ Failed to send Telegram notification to user ${state}`);
+      console.warn(
+        `⚠️ Failed to send Telegram notification to user ${telegramUserId}`
+      );
     }
 
     // Redirect to success page
