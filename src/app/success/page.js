@@ -66,12 +66,12 @@ export default function SuccessPage() {
           </div>
 
           <h1 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
-            Payment Verified & Plan Activated!
+            Payment verified & plan activated!
           </h1>
 
           <p className="text-xl text-gray-600 mb-8">
-            Welcome to Votion.me! Your {userData?.plan?.toUpperCase()} plan has
-            been activated and you can now enjoy all the premium features.
+            Welcome to Votion.me! Your plan has been activated and you can now
+            enjoy all the premium features.
           </p>
 
           <div className="bg-gray-50 rounded-2xl p-8 mb-8">
@@ -86,10 +86,6 @@ export default function SuccessPage() {
               <li className="flex items-start">
                 <span className="text-green-500 mr-3 text-lg">✓</span>
                 <span>You can start using premium features immediately</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-3 text-lg">✓</span>
-                <span>Check your email for subscription confirmation</span>
               </li>
               <li className="flex items-start">
                 <span className="text-green-500 mr-3 text-lg">✓</span>
@@ -110,7 +106,7 @@ export default function SuccessPage() {
               Back to Telegram Bot
             </a>
 
-            <p className="text-sm text-gray-500">
+            {/* <p className="text-sm text-gray-500">
               Need help? Contact us at{" "}
               <a
                 href="mailto:support@votion.me"
@@ -118,7 +114,7 @@ export default function SuccessPage() {
               >
                 support@votion.me
               </a>
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
