@@ -172,16 +172,16 @@ export default function Home() {
                     <div className="flex items-start space-x-2">
                       <div className="bg-white rounded-2xl px-3 py-2 max-w-xs">
                         <p className="text-sm text-gray-700 mb-2">
-                          ✅ Saved to Notion! I've created a new note in your
-                          "Meeting Notes" database with the title "Q4 Strategy
-                          Discussion"
+                          ✅ Saved to Notion! I&apos;ve created a new note in
+                          your &ldquo;Meeting Notes&rdquo; database with the
+                          title &ldquo;Q4 Strategy Discussion&rdquo;
                         </p>
                         <div className="bg-blue-50 rounded-lg p-2 border border-blue-200">
                           <p className="text-sm text-blue-800 font-medium">
                             📝 New Note Created
                           </p>
                           <p className="text-sm text-blue-700">
-                            Meeting Notes {">"} Q4 Strategy Discussion
+                            Meeting Notes &gt; Q4 Strategy Discussion
                           </p>
                         </div>
                         <span className="text-sm text-gray-500 block mt-1">
@@ -206,16 +206,16 @@ export default function Home() {
                     <div className="flex items-start space-x-2">
                       <div className="bg-white rounded-2xl px-3 py-2 max-w-xs">
                         <p className="text-sm text-gray-700 mb-2">
-                          ✅ Task created! "Follow up on Q4 strategy
-                          implementation" added to your "Work Tasks" database
-                          with priority "High"
+                          ✅ Task created! &ldquo;Follow up on Q4 strategy
+                          implementation&rdquo; added to your &ldquo;Work
+                          Tasks&rdquo; database with priority &ldquo;High&rdquo;
                         </p>
                         <div className="bg-green-50 rounded-lg p-2 border border-green-200">
                           <p className="text-sm text-green-800 font-medium">
                             ✅ New Task Created
                           </p>
                           <p className="text-sm text-green-700">
-                            Work Tasks {">"} Follow up on Q4 strategy
+                            Work Tasks &gt; Follow up on Q4 strategy
                             implementation
                           </p>
                           <p className="text-sm text-green-600">
@@ -489,7 +489,7 @@ export default function Home() {
             <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
               The only AI assistant
               <span className="block bg-black text-white px-8 py-3 rounded-3xl transform -rotate-1 inline-block mt-2">
-                you'll ever hire
+                you&apos;ll ever hire
               </span>
             </h2>
           </div>

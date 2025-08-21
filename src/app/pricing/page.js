@@ -98,7 +98,7 @@ export default function PricingPage() {
             </h2>
             {userData?.plan && (
               <p className="text-lg text-gray-600">
-                You're upgrading from:{" "}
+                You&apos;re upgrading from:{" "}
                 <span className="font-semibold capitalize">
                   {userData.plan}
                 </span>

@@ -10,12 +10,12 @@ export async function notifyTelegramBot(userId, workspaceName) {
   try {
     const message =
       `🎉 **Notion Connected Successfully!**\n\n` +
-      `✅ Your Notion workspace "${workspaceName}" is now connected to votion.me\n\n` +
-      `🎤 You can now send me voice messages and I'll help you manage your Notion workspace!\n\n` +
+      `✅ Your Notion workspace &ldquo;${workspaceName}&rdquo; is now connected to votion.me\n\n` +
+      `🎤 You can now send me voice messages and I&apos;ll help you manage your Notion workspace!\n\n` +
       `💡 Try saying:\n` +
-      `• "Create a page called Meeting Notes"\n` +
-      `• "Add buy groceries to my shopping list"\n` +
-      `• "Create a table with columns name, age, email"`;
+      `• &ldquo;Create a page called Meeting Notes&rdquo;\n` +
+      `• &ldquo;Add buy groceries to my shopping list&rdquo;\n` +
+      `• &ldquo;Create a table with columns name, age, email&rdquo;`;
 
     const response = await fetch(
       `https://api.telegram.org/bot${botToken}/sendMessage`,
