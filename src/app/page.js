@@ -38,6 +38,14 @@ export default function Home() {
                 >
                   Contact
                 </Link>
+                <a
+                  href="https://t.me/votion_assistant_bot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded-xl text-sm transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                >
+                  Start for free
+                </a>
               </div>
             </div>
           </div>
@@ -47,7 +55,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="min-h-screen bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="flex lg:flex-row flex-col gap-20 items-center">
             {/* Left Side - Content */}
             <div className="space-y-10">
               <div className="space-y-8">
@@ -59,19 +67,25 @@ export default function Home() {
                   {/* with Notion */}
                 </h1>
                 <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-xl">
-                  Speak while you run, drive, or meet. Confirm and we save it to
-                  Notion.
+                  Interact with Notion with your voice while you run, drive, or
+                  meet. Add, edit, and delete tasks, notes, and more with your
+                  voice.
                 </p>
               </div>
 
               <div className="space-y-8">
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="group bg-black hover:bg-gray-800 text-white font-bold py-4 px-8 rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                  <a
+                    href="https://t.me/votion_assistant_bot"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group bg-black hover:bg-gray-800 text-white font-bold py-4 px-8 rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                  >
                     Start for free
                     <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">
                       →
                     </span>
-                  </button>
+                  </a>
                   {/* <button className="group border-2 border-gray-300 hover:border-gray-400 text-gray-700 font-semibold py-4 px-8 rounded-2xl text-lg transition-all duration-300 hover:bg-gray-50">
                     Watch demo
                     <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">
@@ -100,137 +114,133 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Side - WhatsApp Mockup */}
+            {/* Right Side - Telegram Mockup */}
             <div className="relative">
-              <div className="relative transform rotate-3 hover:rotate-0 transition-transform duration-500">
+              <div className="relative transform rotate-3 hover:rotate-0 transition-transform duration-500 min-w-md flex justify-center items-center">
                 {/* Main Device Frame */}
-                <div className="bg-white rounded-3xl shadow-2xl p-6 border border-gray-100">
-                  {/* WhatsApp Header */}
-                  <div className="flex items-center space-x-3 mb-6">
+                <div className="bg-[white] rounded-3xl shadow-2xl border border-gray-100 w-fit">
+                  {/* Telegram Header */}
+                  <div className="flex items-center space-x-3  border-gray-100 bg-[#F8F8F8] p-4">
                     <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
                       <span className="text-gray-600 text-lg">←</span>
                     </div>
-                    <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
-                      <span className="text-gray-600 text-lg">📷</span>
-                    </div>
-                    <span className="font-bold text-gray-900 text-lg">
-                      Notis
-                    </span>
-                  </div>
-
-                  {/* WhatsApp Chat Interface */}
-                  <div className="space-y-4">
-                    {/* Outgoing Voice Message */}
-                    <div className="flex items-end space-x-2 justify-end">
-                      <div className="bg-green-500 text-white rounded-2xl px-4 py-3 max-w-xs">
-                        <div className="flex items-center space-x-3 mb-2">
-                          <div className="w-5 h-5 bg-white rounded-full flex items-center justify-center">
-                            <span className="text-green-500 text-sm">▶</span>
-                          </div>
-                          <div className="flex space-x-1">
-                            {[...Array(4)].map((_, i) => (
-                              <div
-                                key={i}
-                                className="w-1 h-4 bg-white rounded-full"
-                              ></div>
-                            ))}
-                          </div>
-                          <span className="text-sm font-medium">2:22</span>
-                        </div>
-                        <div className="flex items-center justify-between text-xs text-green-100">
-                          <span>✓✓</span>
-                          <span>12:41</span>
-                        </div>
-                      </div>
-                      <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-bold">
-                        👥
-                      </div>
-                    </div>
-
-                    {/* Outgoing Text Message */}
-                    <div className="flex items-end space-x-2 justify-end">
-                      <div className="bg-green-500 text-white rounded-2xl px-4 py-3 max-w-xs">
-                        <p className="text-sm mb-2">
-                          Can you organize this into a coherent summary?
-                        </p>
-                        <div className="flex items-center justify-between text-xs text-green-100">
-                          <span>✓✓</span>
-                          <span>12:41</span>
-                        </div>
-                      </div>
-                      <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-bold">
-                        👥
-                      </div>
-                    </div>
-
-                    {/* Incoming Voice Message */}
-                    <div className="flex items-end space-x-2">
-                      <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm font-bold">
-                        AI
-                      </div>
-                      <div className="bg-gray-100 rounded-2xl px-4 py-3 max-w-xs">
-                        <div className="flex items-center space-x-3 mb-2">
-                          <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
-                            <span className="text-white text-sm">▶</span>
-                          </div>
-                          <div className="flex-1 bg-gray-300 rounded-full h-2">
-                            <div className="bg-green-500 h-2 rounded-full w-1/3"></div>
-                          </div>
-                          <span className="text-sm font-medium text-gray-700">
-                            1:00
-                          </span>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <span className="text-red-500 text-lg">♫</span>
-                          <span className="text-xs text-gray-500">12:42</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Incoming Text Message with Link */}
-                    <div className="flex items-end space-x-2">
-                      <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm font-bold">
-                        AI
-                      </div>
-                      <div className="bg-gray-100 rounded-2xl px-4 py-3 max-w-xs">
-                        <p className="text-sm text-gray-700 mb-2">
-                          Sure, I&rsquo;ve compiled your notes on the future of
-                          AI in education and saved it with your notes database.
-                          Here&rsquo;s the link:
-                          https://www.notion.so/The-Future-Of-AI-In-Education
-                        </p>
-                        <span className="text-xs text-gray-500 block">
-                          12:42
+                    <div className="flex-1">
+                      <div className="flex items-center space-x-2">
+                        <Image
+                          src="/images/logo.png"
+                          alt="votion.me logo"
+                          width={24}
+                          height={24}
+                          className="rounded-full"
+                        />
+                        <span className="font-bold text-gray-900 text-lg">
+                          Votion.me
                         </span>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                {/* Floating Voice Input UI */}
-                <div className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-lg p-3 border border-gray-100">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                      <span className="text-white text-lg">🎤</span>
+                  {/* Telegram Chat Interface */}
+                  <div className="space-y-3 bg-[#F5EEE6] p-4">
+                    {/* User Voice Message */}
+                    <div className="flex items-end space-x-2 justify-end">
+                      <div className="bg-[#E5FFD7] rounded-2xl px-3 py-2 max-w-xs border border-gray-200">
+                        <div className="flex items-center space-x-2 mb-1">
+                          <div className="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
+                            <span className="text-white text-sm">▶</span>
+                          </div>
+                          <div className="flex space-x-0.5">
+                            {[...Array(3)].map((_, i) => (
+                              <div
+                                key={i}
+                                className="w-0.5 h-3 bg-gray-400 rounded-full"
+                              ></div>
+                            ))}
+                          </div>
+                          <span className="text-sm font-medium text-gray-700">
+                            0:15
+                          </span>
+                          <span className="text-sm text-gray-400">→</span>
+                        </div>
+                        <span className="text-sm text-gray-500 block">
+                          9:41
+                        </span>
+                      </div>
                     </div>
-                    <div className="flex space-x-1">
-                      <div className="w-1 h-3 bg-gray-300 rounded-full"></div>
-                      <div className="w-1 h-3 bg-gray-300 rounded-full"></div>
+
+                    {/* Bot Success Message */}
+                    <div className="flex items-start space-x-2">
+                      <div className="bg-white rounded-2xl px-3 py-2 max-w-xs">
+                        <p className="text-sm text-gray-700 mb-2">
+                          ✅ Saved to Notion! I've created a new note in your
+                          "Meeting Notes" database with the title "Q4 Strategy
+                          Discussion"
+                        </p>
+                        <div className="bg-blue-50 rounded-lg p-2 border border-blue-200">
+                          <p className="text-sm text-blue-800 font-medium">
+                            📝 New Note Created
+                          </p>
+                          <p className="text-sm text-blue-700">
+                            Meeting Notes {">"} Q4 Strategy Discussion
+                          </p>
+                        </div>
+                        <span className="text-sm text-gray-500 block mt-1">
+                          9:41
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* User Text Message */}
+                    <div className="flex items-end space-x-2 justify-end">
+                      <div className="bg-[#E5FFD7] rounded-2xl px-3 py-2 max-w-xs border border-gray-200">
+                        <p className="text-sm mb-1 text-gray-700">
+                          Can you also add this to my tasks?
+                        </p>
+                        <span className="text-sm text-gray-500 block">
+                          9:41
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Bot Task Creation */}
+                    <div className="flex items-start space-x-2">
+                      <div className="bg-white rounded-2xl px-3 py-2 max-w-xs">
+                        <p className="text-sm text-gray-700 mb-2">
+                          ✅ Task created! "Follow up on Q4 strategy
+                          implementation" added to your "Work Tasks" database
+                          with priority "High"
+                        </p>
+                        <div className="bg-green-50 rounded-lg p-2 border border-green-200">
+                          <p className="text-sm text-green-800 font-medium">
+                            ✅ New Task Created
+                          </p>
+                          <p className="text-sm text-green-700">
+                            Work Tasks {">"} Follow up on Q4 strategy
+                            implementation
+                          </p>
+                          <p className="text-sm text-green-600">
+                            Priority: High | Due: Tomorrow
+                          </p>
+                        </div>
+                        <span className="text-sm text-gray-500 block mt-1">
+                          9:42
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                {/* Floating Notification UI */}
-                <div className="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-lg p-3 border border-gray-100">
-                  <div className="flex flex-col items-center space-y-1">
-                    <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
-                      <span className="text-white text-lg">📮</span>
+                  {/* Message Input Area */}
+                  {/* <div className="mt-4 pt-3 border-t border-gray-100">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-6 h-6 text-gray-400">📎</div>
+                      <div className="flex-1 bg-gray-100 rounded-full px-4 py-2">
+                        <span className="text-sm text-gray-500">Message</span>
+                      </div>
+                      <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                        <span className="text-white text-sm">🎤</span>
+                      </div>
                     </div>
-                    <div className="flex space-x-1">
-                      <div className="w-1 h-2 bg-gray-300 rounded-full"></div>
-                      <div className="w-1 h-2 bg-gray-300 rounded-full"></div>
-                    </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -477,127 +487,147 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
-              Simple, Transparent
+              The only AI assistant
               <span className="block bg-black text-white px-8 py-3 rounded-3xl transform -rotate-1 inline-block mt-2">
-                Pricing
+                you'll ever hire
               </span>
             </h2>
-            <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Choose the plan that fits your needs. All plans include our core
-              features.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-            {/* Free Plan */}
-            <div className="group bg-white border-2 border-gray-200 p-10 rounded-3xl text-center hover:border-blue-300 transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-2xl">
-              <h3 className="text-3xl font-black text-gray-900 mb-3">Free</h3>
-              <p className="text-gray-600 mb-8 text-lg">
-                Perfect for getting started
-              </p>
-              <div className="mb-10">
-                <span className="text-5xl font-black text-gray-900">$0</span>
-                <span className="text-gray-600 text-lg">/month</span>
-              </div>
-              <ul className="text-left space-y-4 mb-10 text-lg">
-                <li className="flex items-center">
-                  <span className="text-green-500 mr-3 text-xl">✓</span>
-                  <span>Up to 100 notes</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-500 mr-3 text-xl">✓</span>
-                  <span>Basic task management</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-500 mr-3 text-xl">✓</span>
-                  <span>1 workspace</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-500 mr-3 text-xl">✓</span>
-                  <span>Email support</span>
-                </li>
-              </ul>
-              <button className="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-4 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105">
-                Get Started Free
+          {/* Billing Toggle */}
+          <div className="flex justify-center mb-16">
+            <div className="bg-gray-100 rounded-full p-1 flex items-center">
+              <button className="px-6 py-3 text-gray-600 font-medium rounded-full transition-all duration-300">
+                Monthly
+              </button>
+              <button className="px-6 py-3 bg-green-500 text-white font-medium rounded-full transition-all duration-300 relative">
+                Annually
+                <span className="absolute -right-16 top-1/2 transform -translate-y-1/2 bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-medium">
+                  Save 20%
+                </span>
               </button>
             </div>
+          </div>
 
-            {/* Pro Plan */}
-            <div className="bg-blue-50 border-2 border-blue-500 p-8 rounded-2xl text-center relative transform scale-105">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                  Most Popular
-                </span>
+          {/* Pricing Cards */}
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* PRO Plan */}
+            <div className="bg-black rounded-2xl p-8 text-center text-white shadow-2xl">
+              <h3 className="text-3xl font-black mb-4">💰 PRO</h3>
+              <div className="text-4xl font-black mb-4">$15/month</div>
+              <div className="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-medium mb-4 inline-block">
+                100 voice messages
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Pro</h3>
-              <p className="text-gray-600 mb-6">For professionals and teams</p>
-              <div className="mb-8">
-                <span className="text-4xl font-bold text-gray-900">$12</span>
-                <span className="text-gray-600">/month</span>
-              </div>
-              <ul className="text-left space-y-3 mb-8">
-                <li className="flex items-center">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Unlimited notes</span>
+              <button className="w-full bg-white text-black font-bold py-4 px-6 rounded-full text-lg transition-all duration-300 transform hover:scale-105 mb-8">
+                Start for free
+              </button>
+              <ul className="space-y-4 text-left">
+                <li className="flex items-start">
+                  <span className="text-white mr-3 text-lg">✓</span>
+                  <span>Everything in FREE</span>
                 </li>
-                <li className="flex items-center">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Advanced task management</span>
+                <li className="flex items-start">
+                  <span className="text-white mr-3 text-lg">✓</span>
+                  <span>Advanced Notion features</span>
                 </li>
-                <li className="flex items-center">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Up to 10 workspaces</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Team collaboration</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-500 mr-2">✓</span>
+                <li className="flex items-start">
+                  <span className="text-white mr-3 text-lg">✓</span>
                   <span>Priority support</span>
                 </li>
+                <li className="flex items-start">
+                  <span className="text-white mr-3 text-lg">✓</span>
+                  <span>Usage analytics</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-white mr-3 text-lg">✓</span>
+                  <span>Best for: Regular users, small teams</span>
+                </li>
               </ul>
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
-                Start Free Trial
-              </button>
             </div>
 
-            {/* Enterprise Plan */}
-            <div className="bg-white border-2 border-gray-200 p-8 rounded-2xl text-center hover:border-purple-300 transition duration-300">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                Enterprise
-              </h3>
-              <p className="text-gray-600 mb-6">For large organizations</p>
-              <div className="mb-8">
-                <span className="text-4xl font-bold text-gray-900">$29</span>
-                <span className="text-gray-600">/month</span>
+            {/* PRO+ Plan */}
+            <div className="bg-black rounded-2xl p-8 text-center text-white shadow-2xl">
+              <h3 className="text-3xl font-black mb-4">🚀 PRO+</h3>
+              <div className="text-4xl font-black mb-4">$50/month</div>
+              <div className="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-medium mb-4 inline-block">
+                300 voice messages
               </div>
-              <ul className="text-left space-y-3 mb-8">
-                <li className="flex items-center">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Everything in Pro</span>
+              <button className="w-full bg-white text-black font-bold py-4 px-6 rounded-full text-lg transition-all duration-300 transform hover:scale-105 mb-8">
+                Start for free
+              </button>
+              <ul className="space-y-4 text-left">
+                <li className="flex items-start">
+                  <span className="text-white mr-3 text-lg">✓</span>
+                  <span>Everything in PRO</span>
                 </li>
-                <li className="flex items-center">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Unlimited workspaces</span>
+                <li className="flex items-start">
+                  <span className="text-white mr-3 text-lg">✓</span>
+                  <span>Team collaboration features</span>
                 </li>
-                <li className="flex items-center">
-                  <span className="text-green-500 mr-2">✓</span>
+                <li className="flex items-start">
+                  <span className="text-white mr-3 text-lg">✓</span>
                   <span>Advanced analytics</span>
                 </li>
-                <li className="flex items-center">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>SSO & advanced security</span>
+                <li className="flex items-start">
+                  <span className="text-white mr-3 text-lg">✓</span>
+                  <span>Custom integrations</span>
                 </li>
-                <li className="flex items-center">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Dedicated support</span>
+                <li className="flex items-start">
+                  <span className="text-white mr-3 text-lg">✓</span>
+                  <span>Best for: Power users, growing teams</span>
                 </li>
               </ul>
-              <button className="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3 px-6 rounded-lg transition duration-300">
-                Contact Sales
-              </button>
             </div>
+
+            {/* ULTRA Plan */}
+            <div className="bg-black rounded-2xl p-8 text-center text-white shadow-2xl">
+              <h3 className="text-3xl font-black mb-4">♾️ ULTRA</h3>
+              <div className="text-4xl font-black mb-4">$150/month</div>
+              <div className="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-medium mb-4 inline-block">
+                3000 voice messages
+              </div>
+              <button className="w-full bg-white text-black font-bold py-4 px-6 rounded-full text-lg transition-all duration-300 transform hover:scale-105 mb-8">
+                Start for free
+              </button>
+              <ul className="space-y-4 text-left">
+                <li className="flex items-start">
+                  <span className="text-white mr-3 text-lg">✓</span>
+                  <span>Everything in PRO+</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-white mr-3 text-lg">✓</span>
+                  <span>Enterprise features</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-white mr-3 text-lg">✓</span>
+                  <span>Dedicated support</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-white mr-3 text-lg">✓</span>
+                  <span>Custom solutions</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-white mr-3 text-lg">✓</span>
+                  <span>Best for: Enterprise users, large teams</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* FREE Plan Note */}
+          <div className="text-center mt-16">
+            <p className="text-lg text-gray-600 mb-6">
+              🚀 <strong>FREE Plan</strong> available with 15 voice messages per
+              month
+            </p>
+            <a
+              href="https://t.me/votion_assistant_bot"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full text-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Try FREE Plan
+            </a>
           </div>
         </div>
       </section>
