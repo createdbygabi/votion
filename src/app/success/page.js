@@ -1,10 +1,10 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import Image from "next/image";
 
-export default function SuccessPage() {
+function SuccessPageContent() {
   const searchParams = useSearchParams();
   const [userData, setUserData] = useState(null);
   const [isVerified, setIsVerified] = useState(false);
@@ -70,8 +70,8 @@ export default function SuccessPage() {
           </h1>
 
           <p className="text-xl text-gray-600 mb-8">
-            Welcome to Votion.me! Your plan has been activated and you can now
-            enjoy all the premium features.
+            Welcome to Votion.me! Your {userData?.plan?.toUpperCase()} plan has
+            been activated and you can now enjoy all the premium features.
           </p>
 
           <div className="bg-gray-50 rounded-2xl p-8 mb-8">
@@ -106,7 +106,7 @@ export default function SuccessPage() {
               Back to Telegram Bot
             </a>
 
-            {/* <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-500">
               Need help? Contact us at{" "}
               <a
                 href="mailto:support@votion.me"
@@ -114,10 +114,27 @@ export default function SuccessPage() {
               >
                 support@votion.me
               </a>
-            </p> */}
+            </p>
           </div>
         </div>
       </section>
     </div>
+  );
+}
+
+export default function SuccessPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-white flex items-center justify-center">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-black mx-auto mb-4"></div>
+            <p className="text-gray-600">Loading...</p>
+          </div>
+        </div>
+      }
+    >
+      <SuccessPageContent />
+    </Suspense>
   );
 }
