@@ -316,8 +316,8 @@ export default function Home() {
                         •
                       </span>
                       <span className="group-hover/item:text-red-800 transition-colors duration-200 leading-relaxed">
-                        "I had a great idea while driving, but I can't type it
-                        down safely"
+                        "I had a great idea while driving, but I can&apos;t type
+                        it down safely"
                       </span>
                     </li>
                     <li className="flex items-start group/item">
@@ -334,7 +334,8 @@ export default function Home() {
                         •
                       </span>
                       <span className="group-hover/item:text-red-800 transition-colors duration-200 leading-relaxed">
-                        "I'm in a meeting and can't type without being rude"
+                        "I&apos;m in a meeting and can&apos;t type without being
+                        rude"
                       </span>
                     </li>
                     <li className="flex items-start group/item">
@@ -653,8 +654,8 @@ export default function Home() {
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
                   Create new pages, databases, tasks, notes, and more in
-                  seconds. Just say "Create a new task for tomorrow" and it's
-                  done.
+                  seconds. Just say &ldquo;Create a new task for tomorrow&rdquo;
+                  and it&apos;s done.
                 </p>
               </div>
             </div>
@@ -670,8 +671,8 @@ export default function Home() {
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
                   Find information instantly without navigating through Notion.
-                  Ask "Show me all tasks due this week" and get results in
-                  seconds.
+                  Ask &ldquo;Show me all tasks due this week&rdquo; and get
+                  results in seconds.
                 </p>
               </div>
             </div>
@@ -687,8 +688,8 @@ export default function Home() {
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
                   Update any field with voice commands - faster than finding and
-                  clicking through Notion's interface. "Change the due date to
-                  Friday."
+                  clicking through Notion&apos;s interface. &ldquo;Change the
+                  due date to Friday.&rdquo;
                 </p>
               </div>
             </div>
@@ -704,7 +705,7 @@ export default function Home() {
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
                   Safely remove or archive items with voice confirmation - no
-                  need to hunt through Notion's right-click menus.
+                  need to hunt through Notion&apos;s right-click menus.
                 </p>
               </div>
             </div>
@@ -720,8 +721,8 @@ export default function Home() {
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
                   Automatically tag, categorize, and organize content in one
-                  voice command. "Add this to my work projects with high
-                  priority."
+                  voice command. &ldquo;Add this to my work projects with high
+                  priority.&rdquo;
                 </p>
               </div>
             </div>
@@ -737,8 +738,8 @@ export default function Home() {
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
                   Create connections between pages and databases instantly.
-                  "Link this task to the project roadmap" - no more searching
-                  through Notion.
+                  &ldquo;Link this task to the project roadmap&rdquo; - no more
+                  searching through Notion.
                 </p>
               </div>
             </div>
@@ -753,9 +754,9 @@ export default function Home() {
                   Date & Time Magic
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Natural date parsing that's faster than Notion's date picker.
-                  "Set reminder for 3 days from now" - understands natural
-                  language.
+                  Natural date parsing that&apos;s faster than Notion&apos;s
+                  date picker. &ldquo;Set reminder for 3 days from now&rdquo; -
+                  understands natural language.
                 </p>
               </div>
             </div>
@@ -770,9 +771,9 @@ export default function Home() {
                   Database Operations
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Filter, sort, and query databases with voice - bypass Notion's
-                  complex filter interface. "Show me all high-priority tasks
-                  assigned to me."
+                  Filter, sort, and query databases with voice - bypass
+                  Notion&apos;s complex filter interface. &ldquo;Show me all
+                  high-priority tasks assigned to me.&rdquo;
                 </p>
               </div>
             </div>
@@ -787,9 +788,9 @@ export default function Home() {
                   Bulk Operations
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Handle multiple items at once without Notion's multi-select
-                  interface. "Mark all completed tasks as done" - one command,
-                  instant results.
+                  Handle multiple items at once without Notion&apos;s
+                  multi-select interface. &ldquo;Mark all completed tasks as
+                  done&rdquo; - one command, instant results.
                 </p>
               </div>
             </div>
@@ -1042,8 +1043,8 @@ export default function Home() {
               <div className="space-y-6">
                 <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
                   <p className="text-gray-700 italic leading-relaxed">
-                    "I'm not losing another brilliant idea because I can't type
-                    fast enough."
+                    &ldquo;I&apos;m not losing another brilliant idea because I
+                    can&apos;t type fast enough.&rdquo;
                   </p>
                 </div>
 
