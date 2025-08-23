@@ -1,7 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { SiNotion, SiTelegram } from "react-icons/si";
+import { useState } from "react";
 
 export default function Home() {
+  const [billingCycle, setBillingCycle] = useState("monthly");
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -21,6 +27,12 @@ export default function Home() {
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 <Link
+                  href="#how-it-works"
+                  className="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
+                >
+                  How it works
+                </Link>
+                <Link
                   href="#features"
                   className="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
                 >
@@ -31,12 +43,6 @@ export default function Home() {
                   className="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Pricing
-                </Link>
-                <Link
-                  href="#contact"
-                  className="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  Contact
                 </Link>
                 <a
                   href="https://t.me/votion_assistant_bot"
@@ -67,9 +73,9 @@ export default function Home() {
                   {/* with Notion */}
                 </h1>
                 <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-xl">
-                  Interact with Notion with your voice while you run, drive, or
-                  meet. Add, edit, and delete tasks, notes, and more with your
-                  voice.
+                  Never lose any idea while you run, drive, or meet again.{" "}
+                  <br /> Interact with Notion and add, edit, and delete tasks,
+                  notes, and more with your voice.
                 </p>
               </div>
 
@@ -92,6 +98,31 @@ export default function Home() {
                       ▶
                     </span>
                   </button> */}
+                </div>
+
+                {/* Work with Section */}
+                <div className="flex flex-col items-center sm:items-start space-y-3">
+                  <p className="text-sm text-gray-500 font-medium">
+                    Works with
+                  </p>
+                  <div className="flex items-center space-x-6">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-8 h-8 bg-white rounded-lg shadow-sm border border-gray-200 flex items-center justify-center">
+                        <SiNotion className="w-5 h-5 text-gray-900" />
+                      </div>
+                      <span className="text-sm font-semibold text-gray-700">
+                        Notion
+                      </span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-8 h-8 bg-blue-500 rounded-lg shadow-sm flex items-center justify-center">
+                        <SiTelegram className="w-5 h-5 text-white" />
+                      </div>
+                      <span className="text-sm font-semibold text-gray-700">
+                        Telegram
+                      </span>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Social Proof */}
@@ -252,70 +283,84 @@ export default function Home() {
       <section className="py-32 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
-              Before vs. After
-              <span className="block bg-black text-white px-8 py-3 rounded-3xl transform -rotate-1 inline-block mt-2">
-                votion.me
-              </span>
+            <h2 className="text-4xl lg:text-5xl xl:text-6xl font-black text-gray-900 leading-tight mb-6">
+              Never lose your{" "}
+              <span className="bg-black text-white px-6 py-3 rounded-2xl transform -rotate-1 mx-2">
+                brilliant ideas
+              </span>{" "}
+              again
             </h2>
             <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              See how votion.me transforms your chaotic workflow into organized
-              productivity
+              Stop the frustration of forgotten thoughts and missed
+              opportunities
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Before */}
-            <div className="group transform hover:scale-105 transition-all duration-500">
-              <div className="bg-white p-10 rounded-3xl shadow-2xl border border-gray-100 relative">
+            <div className="group">
+              <div className="relative overflow-hidden bg-gradient-to-br from-white to-red-50/30 p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-red-100/50 hover:border-red-200/80 hover:-translate-y-2">
+                <div className="absolute inset-0 bg-gradient-to-br from-red-50/20 to-rose-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
                 <div className="relative z-10">
-                  <div className="text-center mb-8">
-                    <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-3xl">❌</span>
+                  <div className="text-center mb-10">
+                    <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-rose-600 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-red-500/25">
+                      <span className="text-3xl">😤</span>
                     </div>
-                    <h3 className="text-3xl font-black text-red-800 mb-3">
-                      Before votion.me
+                    <h3 className="text-3xl font-black text-red-800 mb-4 group-hover:text-red-700 transition-colors duration-300">
+                      The Daily Struggle
                     </h3>
                   </div>
-                  <ul className="space-y-4 text-red-700 text-lg">
+                  <ul className="space-y-5 text-red-700 text-base">
                     <li className="flex items-start group/item">
-                      <span className="mr-3 text-red-500 group-hover/item:scale-110 transition-transform duration-200">
+                      <span className="mr-4 text-red-500 group-hover/item:scale-125 transition-transform duration-200 text-lg">
                         •
                       </span>
-                      <span className="group-hover/item:text-red-800 transition-colors duration-200">
-                        Notes scattered across 5+ apps
+                      <span className="group-hover/item:text-red-800 transition-colors duration-200 leading-relaxed">
+                        "I had a great idea while driving, but I can't type it
+                        down safely"
                       </span>
                     </li>
                     <li className="flex items-start group/item">
-                      <span className="mr-3 text-red-500 group-hover/item:scale-110 transition-transform duration-200">
+                      <span className="mr-4 text-red-500 group-hover/item:scale-125 transition-transform duration-200 text-lg">
                         •
                       </span>
-                      <span className="group-hover/item:text-red-800 transition-colors duration-200">
-                        Important tasks buried in emails
+                      <span className="group-hover/item:text-red-800 transition-colors duration-200 leading-relaxed">
+                        "My brilliant thoughts disappear before I can open
+                        Notion"
                       </span>
                     </li>
                     <li className="flex items-start group/item">
-                      <span className="mr-3 text-red-500 group-hover/item:scale-110 transition-transform duration-200">
+                      <span className="mr-4 text-red-500 group-hover/item:scale-125 transition-transform duration-200 text-lg">
                         •
                       </span>
-                      <span className="group-hover/item:text-red-800 transition-colors duration-200">
-                        Team collaboration is chaotic
+                      <span className="group-hover/item:text-red-800 transition-colors duration-200 leading-relaxed">
+                        "I'm in a meeting and can't type without being rude"
                       </span>
                     </li>
                     <li className="flex items-start group/item">
-                      <span className="mr-3 text-red-500 group-hover/item:scale-110 transition-transform duration-200">
+                      <span className="mr-4 text-red-500 group-hover/item:scale-125 transition-transform duration-200 text-lg">
                         •
                       </span>
-                      <span className="group-hover/item:text-red-800 transition-colors duration-200">
-                        Projects never seem to finish
+                      <span className="group-hover/item:text-red-800 transition-colors duration-200 leading-relaxed">
+                        "My notes are everywhere - phone, laptop, paper, but
+                        never in Notion"
                       </span>
                     </li>
                     <li className="flex items-start group/item">
-                      <span className="mr-3 text-red-500 group-hover/item:scale-110 transition-transform duration-200">
+                      <span className="mr-4 text-red-500 group-hover/item:scale-125 transition-transform duration-200 text-lg">
                         •
                       </span>
-                      <span className="group-hover/item:text-red-800 transition-colors duration-200">
-                        Hours wasted searching for information
+                      <span className="group-hover/item:text-red-800 transition-colors duration-200 leading-relaxed">
+                        "I spend more time organizing than actually working"
+                      </span>
+                    </li>
+                    <li className="flex items-start group/item">
+                      <span className="mr-4 text-red-500 group-hover/item:scale-125 transition-transform duration-200 text-lg">
+                        •
+                      </span>
+                      <span className="group-hover/item:text-red-800 transition-colors duration-200 leading-relaxed">
+                        "Navigating through Notion menus takes forever - I need
+                        things faster"
                       </span>
                     </li>
                   </ul>
@@ -324,62 +369,258 @@ export default function Home() {
             </div>
 
             {/* After */}
-            <div className="group transform hover:scale-105 transition-all duration-500">
-              <div className="bg-white p-10 rounded-3xl shadow-2xl border border-gray-100 relative">
+            <div className="group">
+              <div className="relative overflow-hidden bg-gradient-to-br from-white to-green-50/30 p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-green-100/50 hover:border-green-200/80 hover:-translate-y-2">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-50/20 to-emerald-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
                 <div className="relative z-10">
-                  <div className="text-center mb-8">
-                    <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-3xl">✅</span>
+                  <div className="text-center mb-10">
+                    <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-green-500/25">
+                      <span className="text-3xl">🎯</span>
                     </div>
-                    <h3 className="text-3xl font-black text-green-800 mb-3">
-                      After votion.me
+                    <h3 className="text-3xl font-black text-green-800 mb-4 group-hover:text-green-700 transition-colors duration-300">
+                      The votion.me Solution
                     </h3>
                   </div>
-                  <ul className="space-y-4 text-green-700 text-lg">
+                  <ul className="space-y-5 text-green-700 text-base">
                     <li className="flex items-start group/item">
-                      <span className="mr-3 text-green-500 group-hover/item:scale-110 transition-transform duration-200">
+                      <span className="mr-4 text-green-500 group-hover/item:scale-125 transition-transform duration-200 text-lg">
                         •
                       </span>
-                      <span className="group-hover/item:text-green-800 transition-colors duration-200">
-                        Everything organized in one place
+                      <span className="group-hover/item:text-green-800 transition-colors duration-200 leading-relaxed">
+                        "Just speak your mind - it goes straight to Notion while
+                        you drive"
                       </span>
                     </li>
                     <li className="flex items-start group/item">
-                      <span className="mr-3 text-green-500 group-hover/item:scale-110 transition-transform duration-200">
+                      <span className="mr-4 text-green-500 group-hover/item:scale-125 transition-transform duration-200 text-lg">
                         •
                       </span>
-                      <span className="group-hover/item:text-green-800 transition-colors duration-200">
-                        Tasks automatically prioritized
+                      <span className="group-hover/item:text-green-800 transition-colors duration-200 leading-relaxed">
+                        "Your voice becomes your fastest way to capture ideas
+                        anywhere"
                       </span>
                     </li>
                     <li className="flex items-start group/item">
-                      <span className="mr-3 text-green-500 group-hover/item:scale-110 transition-transform duration-200">
+                      <span className="mr-4 text-green-500 group-hover/item:scale-125 transition-transform duration-200 text-lg">
                         •
                       </span>
-                      <span className="group-hover/item:text-green-800 transition-colors duration-200">
-                        Seamless team collaboration
+                      <span className="group-hover/item:text-green-800 transition-colors duration-200 leading-relaxed">
+                        "Stay engaged in meetings while secretly organizing your
+                        thoughts"
                       </span>
                     </li>
                     <li className="flex items-start group/item">
-                      <span className="mr-3 text-green-500 group-hover/item:scale-110 transition-transform duration-200">
+                      <span className="mr-4 text-green-500 group-hover/item:scale-125 transition-transform duration-200 text-lg">
                         •
                       </span>
-                      <span className="group-hover/item:text-green-800 transition-colors duration-200">
-                        Projects completed on time
+                      <span className="group-hover/item:text-green-800 transition-colors duration-200 leading-relaxed">
+                        "Everything automatically organized in your Notion
+                        database"
                       </span>
                     </li>
                     <li className="flex items-start group/item">
-                      <span className="mr-3 text-green-500 group-hover/item:scale-110 transition-transform duration-200">
+                      <span className="mr-4 text-green-500 group-hover/item:scale-125 transition-transform duration-200 text-lg">
                         •
                       </span>
-                      <span className="group-hover/item:text-green-800 transition-colors duration-200">
-                        Instant access to all information
+                      <span className="group-hover/item:text-green-800 transition-colors duration-200 leading-relaxed">
+                        "Focus on what matters - let votion.me handle the
+                        organization"
+                      </span>
+                    </li>
+                    <li className="flex items-start group/item">
+                      <span className="mr-4 text-green-500 group-hover/item:scale-125 transition-transform duration-200 text-lg">
+                        •
+                      </span>
+                      <span className="group-hover/item:text-green-800 transition-colors duration-200 leading-relaxed">
+                        "10x faster than clicking through Notion menus - just
+                        say what you want"
                       </span>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center mt-20">
+            <a
+              href="https://t.me/votion_assistant_bot"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-black hover:bg-gray-800 text-white font-bold py-4 px-8 rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            >
+              Start for free
+              <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">
+                →
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section id="how-it-works" className="py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl lg:text-5xl xl:text-6xl font-black text-gray-900 leading-tight mb-6">
+              How it{" "}
+              <span className="bg-black text-white px-6 py-3 rounded-2xl transform rotate-1 mx-2">
+                works
+              </span>
+            </h2>
+            <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Get started in minutes with our simple 3-step process
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Step 1 */}
+            <div className="group relative">
+              <div className="relative overflow-hidden bg-gradient-to-br from-white to-blue-50/30 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-blue-100/50 hover:border-blue-200/80 hover:-translate-y-2">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 to-indigo-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+                <div className="relative z-10 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-blue-500/25">
+                    <span className="text-2xl text-white font-bold">1</span>
+                  </div>
+                  <h3 className="text-2xl font-black text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                    Connect Notion
+                  </h3>
+                  <p className="text-gray-600 text-base leading-relaxed">
+                    Link your Notion workspace with our secure integration.
+                    One-time setup takes less than 2 minutes.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="group relative">
+              <div className="relative overflow-hidden bg-gradient-to-br from-white to-purple-50/30 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-purple-100/50 hover:border-purple-200/80 hover:-translate-y-2">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-50/20 to-pink-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+                <div className="relative z-10 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-500/25">
+                    <span className="text-2xl text-white font-bold">2</span>
+                  </div>
+                  <h3 className="text-2xl font-black text-gray-900 mb-4 group-hover:text-purple-600 transition-colors duration-300">
+                    Start Chatting
+                  </h3>
+                  <p className="text-gray-600 text-base leading-relaxed">
+                    Open our Telegram bot and start speaking naturally. No
+                    commands to memorize - just talk like you would to a human.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="group relative">
+              <div className="relative overflow-hidden bg-gradient-to-br from-white to-green-50/30 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-green-100/50 hover:border-green-200/80 hover:-translate-y-2">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-50/20 to-emerald-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+                <div className="relative z-10 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-green-500/25">
+                    <span className="text-2xl text-white font-bold">3</span>
+                  </div>
+                  <h3 className="text-2xl font-black text-gray-900 mb-4 group-hover:text-green-600 transition-colors duration-300">
+                    Watch Magic Happen
+                  </h3>
+                  <p className="text-gray-600 text-base leading-relaxed">
+                    Your voice commands instantly create, edit, and organize
+                    content in Notion. See real-time updates and confirmations.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Additional Info */}
+          <div className="mt-20 grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <h3 className="text-3xl font-black text-gray-900">
+                Built for{" "}
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  real people
+                </span>
+              </h3>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                No technical knowledge required. Our AI understands natural
+                language, context, and your specific Notion setup. Just speak
+                your mind and let us handle the rest.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                    <span className="text-white text-sm">✓</span>
+                  </div>
+                  <span className="text-gray-700">
+                    Works with any Notion workspace
+                  </span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                    <span className="text-white text-sm">✓</span>
+                  </div>
+                  <span className="text-gray-700">Secure and private</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                    <span className="text-white text-sm">✓</span>
+                  </div>
+                  <span className="text-gray-700">Available 24/7</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="relative transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl shadow-2xl border border-gray-100 p-8">
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
+                        <span className="text-white text-lg">🎤</span>
+                      </div>
+                      <div className="flex-1">
+                        <div className="h-3 bg-gray-200 rounded-full w-32"></div>
+                        <div className="h-2 bg-gray-100 rounded-full w-24 mt-2"></div>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                        <span className="text-white text-lg">✨</span>
+                      </div>
+                      <div className="flex-1">
+                        <div className="h-3 bg-gray-200 rounded-full w-40"></div>
+                        <div className="h-2 bg-gray-100 rounded-full w-28 mt-2"></div>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center">
+                        <span className="text-white text-lg">📝</span>
+                      </div>
+                      <div className="flex-1">
+                        <div className="h-3 bg-gray-200 rounded-full w-36"></div>
+                        <div className="h-2 bg-gray-100 rounded-full w-20 mt-2"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center mt-16">
+            <a
+              href="https://t.me/votion_assistant_bot"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-black hover:bg-gray-800 text-white font-bold py-4 px-8 rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            >
+              Start for free
+              <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">
+                →
+              </span>
+            </a>
           </div>
         </div>
       </section>
@@ -388,96 +629,185 @@ export default function Home() {
       <section id="features" className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
-              Powerful Features That
-              <span className="block bg-black text-white px-8 py-3 rounded-3xl transform rotate-1 inline-block mt-2">
-                Work Together
+            <h2 className="text-4xl lg:text-5xl xl:text-6xl font-black text-gray-900 leading-tight mb-6">
+              Everything you can do with your{" "}
+              <span className="bg-black text-white px-6 py-3 rounded-2xl transform rotate-1 mx-2">
+                voice
               </span>
             </h2>
             <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Everything you need to stay organized, focused, and productive
+              Full CRUD operations and powerful features for any Notion document
+              type
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-10">
-            <div className="group bg-white p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border border-gray-100">
-              <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-3xl">📝</span>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="group relative overflow-hidden bg-gradient-to-br from-white to-gray-50 p-8 rounded-3xl border border-gray-100/50 hover:border-gray-200/80 transition-all duration-500 hover:shadow-2xl hover:shadow-gray-100/50 hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-purple-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+              <div className="relative z-10">
+                <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-blue-500/25">
+                  <span className="text-2xl text-white">✨</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                  Create Anything
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Create new pages, databases, tasks, notes, and more in
+                  seconds. Just say "Create a new task for tomorrow" and it's
+                  done.
+                </p>
               </div>
-              <h3 className="text-2xl font-black text-gray-900 mb-4">
-                Smart Note Taking
-              </h3>
-              <p className="text-gray-600 text-lg leading-relaxed">
-                Capture ideas instantly with intelligent formatting, tags, and
-                automatic organization that makes finding information
-                effortless.
-              </p>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-2xl">✅</span>
+            <div className="group relative overflow-hidden bg-gradient-to-br from-white to-gray-50 p-8 rounded-3xl border border-gray-100/50 hover:border-gray-200/80 transition-all duration-500 hover:shadow-2xl hover:shadow-gray-100/50 hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-green-50/30 to-emerald-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+              <div className="relative z-10">
+                <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-green-500/25">
+                  <span className="text-2xl text-white">📖</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors duration-300">
+                  Read & Search
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Find information instantly without navigating through Notion.
+                  Ask "Show me all tasks due this week" and get results in
+                  seconds.
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Task Management
-              </h3>
-              <p className="text-gray-600">
-                Turn notes into actionable tasks with smart prioritization,
-                deadlines, and progress tracking that keeps you moving forward.
-              </p>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-2xl">👥</span>
+            <div className="group relative overflow-hidden bg-gradient-to-br from-white to-gray-50 p-8 rounded-3xl border border-gray-100/50 hover:border-gray-200/80 transition-all duration-500 hover:shadow-2xl hover:shadow-gray-100/50 hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-50/30 to-pink-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+              <div className="relative z-10">
+                <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-500/25">
+                  <span className="text-2xl text-white">✏️</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors duration-300">
+                  Edit & Update
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Update any field with voice commands - faster than finding and
+                  clicking through Notion's interface. "Change the due date to
+                  Friday."
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Team Collaboration
-              </h3>
-              <p className="text-gray-600">
-                Share workspaces, assign tasks, and collaborate seamlessly with
-                real-time updates and powerful permission controls.
-              </p>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300">
-              <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-2xl">📊</span>
+            <div className="group relative overflow-hidden bg-gradient-to-br from-white to-gray-50 p-8 rounded-3xl border border-gray-100/50 hover:border-gray-200/80 transition-all duration-500 hover:shadow-2xl hover:shadow-gray-100/50 hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-red-50/30 to-rose-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+              <div className="relative z-10">
+                <div className="w-14 h-14 bg-gradient-to-br from-red-500 to-rose-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-red-500/25">
+                  <span className="text-2xl text-white">🗑️</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-red-600 transition-colors duration-300">
+                  Delete & Archive
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Safely remove or archive items with voice confirmation - no
+                  need to hunt through Notion's right-click menus.
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Progress Analytics
-              </h3>
-              <p className="text-gray-600">
-                Track your productivity with detailed insights, time analysis,
-                and performance metrics that help you optimize your workflow.
-              </p>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-2xl">🔒</span>
+            <div className="group relative overflow-hidden bg-gradient-to-br from-white to-gray-50 p-8 rounded-3xl border border-gray-100/50 hover:border-gray-200/80 transition-all duration-500 hover:shadow-2xl hover:shadow-gray-100/50 hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-yellow-50/30 to-amber-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+              <div className="relative z-10">
+                <div className="w-14 h-14 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-yellow-500/25">
+                  <span className="text-2xl text-white">🏷️</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-amber-600 transition-colors duration-300">
+                  Smart Organization
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Automatically tag, categorize, and organize content in one
+                  voice command. "Add this to my work projects with high
+                  priority."
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Enterprise Security
-              </h3>
-              <p className="text-gray-600">
-                Bank-level security with end-to-end encryption, SSO integration,
-                and compliance features that keep your data safe.
-              </p>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300">
-              <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-2xl">🔄</span>
+            <div className="group relative overflow-hidden bg-gradient-to-br from-white to-gray-50 p-8 rounded-3xl border border-gray-100/50 hover:border-gray-200/80 transition-all duration-500 hover:shadow-2xl hover:shadow-gray-100/50 hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-indigo-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+              <div className="relative z-10">
+                <div className="w-14 h-14 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-indigo-500/25">
+                  <span className="text-2xl text-white">🔗</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors duration-300">
+                  Cross-Linking
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Create connections between pages and databases instantly.
+                  "Link this task to the project roadmap" - no more searching
+                  through Notion.
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Smart Automation
-              </h3>
-              <p className="text-gray-600">
-                Automate repetitive tasks, set up workflows, and let AI handle
-                the busywork so you can focus on what matters most.
-              </p>
             </div>
+
+            <div className="group relative overflow-hidden bg-gradient-to-br from-white to-gray-50 p-8 rounded-3xl border border-gray-100/50 hover:border-gray-200/80 transition-all duration-500 hover:shadow-2xl hover:shadow-gray-100/50 hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-pink-50/30 to-rose-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+              <div className="relative z-10">
+                <div className="w-14 h-14 bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-pink-500/25">
+                  <span className="text-2xl text-white">📅</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-pink-600 transition-colors duration-300">
+                  Date & Time Magic
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Natural date parsing that's faster than Notion's date picker.
+                  "Set reminder for 3 days from now" - understands natural
+                  language.
+                </p>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden bg-gradient-to-br from-white to-gray-50 p-8 rounded-3xl border border-gray-100/50 hover:border-gray-200/80 transition-all duration-500 hover:shadow-2xl hover:shadow-gray-100/50 hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-teal-50/30 to-cyan-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+              <div className="relative z-10">
+                <div className="w-14 h-14 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-teal-500/25">
+                  <span className="text-2xl text-white">📊</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors duration-300">
+                  Database Operations
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Filter, sort, and query databases with voice - bypass Notion's
+                  complex filter interface. "Show me all high-priority tasks
+                  assigned to me."
+                </p>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden bg-gradient-to-br from-white to-gray-50 p-8 rounded-3xl border border-gray-100/50 hover:border-gray-200/80 transition-all duration-500 hover:shadow-2xl hover:shadow-gray-100/50 hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-50/30 to-red-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+              <div className="relative z-10">
+                <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-orange-500/25">
+                  <span className="text-2xl text-white">🔄</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors duration-300">
+                  Bulk Operations
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Handle multiple items at once without Notion's multi-select
+                  interface. "Mark all completed tasks as done" - one command,
+                  instant results.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center mt-16">
+            <a
+              href="https://t.me/votion_assistant_bot"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-black hover:bg-gray-800 text-white font-bold py-4 px-8 rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            >
+              Start for free
+              <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">
+                →
+              </span>
+            </a>
           </div>
         </div>
       </section>
@@ -497,14 +827,30 @@ export default function Home() {
           {/* Billing Toggle */}
           <div className="flex justify-center mb-16">
             <div className="bg-gray-100 rounded-full p-1 flex items-center">
-              <button className="px-6 py-3 text-gray-600 font-medium rounded-full transition-all duration-300">
+              <button
+                onClick={() => setBillingCycle("monthly")}
+                className={`px-6 py-3 text-sm font-medium rounded-full transition-all duration-300 ${
+                  billingCycle === "monthly"
+                    ? "bg-black text-white shadow-lg"
+                    : "text-gray-600 hover:text-gray-900"
+                }`}
+              >
                 Monthly
               </button>
-              <button className="px-6 py-3 bg-green-500 text-white font-medium rounded-full transition-all duration-300 relative">
+              <button
+                onClick={() => setBillingCycle("annually")}
+                className={`px-6 py-3 text-sm font-medium rounded-full transition-all duration-300 relative ${
+                  billingCycle === "annually"
+                    ? "bg-green-500 text-white shadow-lg"
+                    : "text-gray-600 hover:text-gray-900"
+                }`}
+              >
                 Annually
-                <span className="absolute -right-16 top-1/2 transform -translate-y-1/2 bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-medium">
-                  Save 20%
-                </span>
+                {billingCycle === "annually" && (
+                  <span className="absolute -right-16 top-1/2 transform -translate-y-1/2 bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-medium">
+                    Save 20%
+                  </span>
+                )}
               </button>
             </div>
           </div>
@@ -512,15 +858,27 @@ export default function Home() {
           {/* Pricing Cards */}
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* PRO Plan */}
-            <div className="bg-black rounded-2xl p-8 text-center text-white shadow-2xl">
-              <h3 className="text-3xl font-black mb-4">💰 PRO</h3>
-              <div className="text-4xl font-black mb-4">$15/month</div>
-              <div className="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-medium mb-4 inline-block">
+            <div className="bg-black rounded-4xl px-8 py-12 text-start text-white shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105">
+              <h3 className="text-3xl font-black mb-4">Pro</h3>
+              <div className="text-4xl font-black mb-4">
+                ${billingCycle === "monthly" ? "15" : "12"}/month
+              </div>
+              {billingCycle === "annually" && (
+                <div className="text-lg text-gray-300 mb-2 line-through">
+                  $15/month
+                </div>
+              )}
+              <div className="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-medium mb-6 inline-block">
                 100 voice messages
               </div>
-              <button className="w-full bg-white text-black font-bold py-4 px-6 rounded-full text-lg transition-all duration-300 transform hover:scale-105 mb-8">
+              <a
+                href="https://t.me/votion_assistant_bot"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full text-center bg-white text-black font-bold py-4 px-6 rounded-4xl text-lg transition-all duration-300 transform hover:scale-105 mb-8 block"
+              >
                 Start for free
-              </button>
+              </a>
               <ul className="space-y-4 text-left">
                 <li className="flex items-start">
                   <span className="text-white mr-3 text-lg">✓</span>
@@ -546,15 +904,27 @@ export default function Home() {
             </div>
 
             {/* PRO+ Plan */}
-            <div className="bg-black rounded-2xl p-8 text-center text-white shadow-2xl">
-              <h3 className="text-3xl font-black mb-4">🚀 PRO+</h3>
-              <div className="text-4xl font-black mb-4">$50/month</div>
-              <div className="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-medium mb-4 inline-block">
+            <div className="bg-black rounded-4xl px-8 py-12 text-start text-white shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105">
+              <h3 className="text-3xl font-black mb-4">Pro+</h3>
+              <div className="text-4xl font-black mb-4">
+                ${billingCycle === "monthly" ? "50" : "40"}/month
+              </div>
+              {billingCycle === "annually" && (
+                <div className="text-lg text-gray-300 mb-2 line-through">
+                  $50/month
+                </div>
+              )}
+              <div className="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-medium mb-6 inline-block">
                 300 voice messages
               </div>
-              <button className="w-full bg-white text-black font-bold py-4 px-6 rounded-full text-lg transition-all duration-300 transform hover:scale-105 mb-8">
+              <a
+                href="https://t.me/votion_assistant_bot"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-center w-full bg-white text-black font-bold py-4 px-6 rounded-4xl text-lg transition-all duration-300 transform hover:scale-105 mb-8 block"
+              >
                 Start for free
-              </button>
+              </a>
               <ul className="space-y-4 text-left">
                 <li className="flex items-start">
                   <span className="text-white mr-3 text-lg">✓</span>
@@ -580,15 +950,27 @@ export default function Home() {
             </div>
 
             {/* ULTRA Plan */}
-            <div className="bg-black rounded-2xl p-8 text-center text-white shadow-2xl">
-              <h3 className="text-3xl font-black mb-4">♾️ ULTRA</h3>
-              <div className="text-4xl font-black mb-4">$150/month</div>
-              <div className="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-medium mb-4 inline-block">
+            <div className="bg-black rounded-4xl px-8 py-12 text-start text-white shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105">
+              <h3 className="text-3xl font-black mb-4">Ultra</h3>
+              <div className="text-4xl font-black mb-4">
+                ${billingCycle === "monthly" ? "150" : "120"}/month
+              </div>
+              {billingCycle === "annually" && (
+                <div className="text-lg text-gray-300 mb-2 line-through">
+                  $150/month
+                </div>
+              )}
+              <div className="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-medium mb-6 inline-block">
                 3000 voice messages
               </div>
-              <button className="w-full bg-white text-black font-bold py-4 px-6 rounded-full text-lg transition-all duration-300 transform hover:scale-105 mb-8">
+              <a
+                href="https://t.me/votion_assistant_bot"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full text-center bg-white text-black font-bold py-4 px-6 rounded-4xl text-lg transition-all duration-300 transform hover:scale-105 mb-8 block"
+              >
                 Start for free
-              </button>
+              </a>
               <ul className="space-y-4 text-left">
                 <li className="flex items-start">
                   <span className="text-white mr-3 text-lg">✓</span>
@@ -616,131 +998,264 @@ export default function Home() {
 
           {/* FREE Plan Note */}
           <div className="text-center mt-16">
-            <p className="text-lg text-gray-600 mb-6">
+            {/* <p className="text-lg text-gray-600 mb-6">
               🚀 <strong>FREE Plan</strong> available with 15 voice messages per
               month
-            </p>
-            <a
+            </p> */}
+            {/* <a
               href="https://t.me/votion_assistant_bot"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full text-lg transition-all duration-300 transform hover:scale-105"
             >
               Try FREE Plan
+            </a> */}
+          </div>
+        </div>
+      </section>
+
+      {/* Founder Story Section */}
+      <section id="founder-story" className="py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Side - Story Content */}
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <div className="inline-flex items-center space-x-2 bg-gray-100 px-4 py-2 rounded-full border border-gray-200">
+                  <span className="w-2 h-2 bg-gray-600 rounded-full"></span>
+                  <span className="text-sm font-medium text-gray-700">
+                    My Story
+                  </span>
+                </div>
+                <h2 className="text-4xl lg:text-5xl font-black text-gray-900 leading-tight">
+                  I built this because{" "}
+                  <span className="bg-black text-white px-4 py-2 rounded-xl">
+                    I was losing ideas too
+                  </span>
+                </h2>
+                <p className="text-lg lg:text-xl text-gray-600 leading-relaxed">
+                  Last year, I had a breakthrough idea while stuck in traffic.
+                  By the time I got home, it was completely gone. I was furious.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
+                  <p className="text-gray-700 italic leading-relaxed">
+                    "I'm not losing another brilliant idea because I can't type
+                    fast enough."
+                  </p>
+                </div>
+
+                <p className="text-gray-600 leading-relaxed">
+                  So I built votion.me. Now I can just speak my thoughts and
+                  they go straight to Notion. No more lost ideas. No more
+                  frustration.
+                </p>
+
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center overflow-hidden">
+                    <Image
+                      src="/images/founder.jpg"
+                      alt="Gabriel - Founder of votion.me"
+                      width={48}
+                      height={48}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900">Gabriel</p>
+                    <p className="text-sm text-gray-600">
+                      The guy who was tired of losing ideas
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Side - Visual Story */}
+            <div className="relative">
+              <div className="relative transform -rotate-2 hover:rotate-0 transition-transform duration-500">
+                <div className="bg-gray-50 rounded-3xl shadow-2xl border border-gray-200 p-8">
+                  <div className="space-y-6">
+                    {/* Timeline Story Elements */}
+                    <div className="flex items-start space-x-4">
+                      <div className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-white text-sm font-bold">😤</span>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-2">
+                          Lost an idea in traffic
+                        </h4>
+                        <p className="text-sm text-gray-600">
+                          Was furious about it
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start space-x-4">
+                      <div className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-white text-sm font-bold">💡</span>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-2">
+                          Built the solution
+                        </h4>
+                        <p className="text-sm text-gray-600">
+                          Voice + Notion integration
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start space-x-4">
+                      <div className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-white text-sm font-bold">🎯</span>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-2">
+                          Never lost an idea again
+                        </h4>
+                        <p className="text-sm text-gray-600">
+                          Now helping others too
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center mt-16">
+            <a
+              href="https://t.me/votion_assistant_bot"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-black hover:bg-gray-800 text-white font-bold py-4 px-8 rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            >
+              Start for free
+              <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">
+                →
+              </span>
             </a>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600">
+      <section className="py-32 bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Productivity?
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
+          <p className="text-xl text-gray-300 mb-8">
             Join thousands of professionals who have already revolutionized
             their workflow with votion.me
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white hover:bg-gray-100 text-blue-600 font-semibold py-4 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105">
-              Start Free Trial
-            </button>
+            <a
+              href="https://t.me/votion_assistant_bot"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-white hover:bg-gray-100 text-black font-bold py-4 px-8 rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            >
+              Start for free
+              <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">
+                →
+              </span>
+            </a>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 py-12">
+      <footer className="bg-white py-16 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-4">votion.me</h3>
-              <p className="text-gray-400">
-                Transform your productivity with intelligent note-taking and
-                task management.
+          <div className="grid md:grid-cols-3 gap-12">
+            {/* Logo and Description */}
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <Image
+                  src="/images/logo.png"
+                  alt="votion.me logo"
+                  width={32}
+                  height={32}
+                  className="rounded-lg"
+                />
+                <h3 className="text-2xl font-bold text-gray-900">votion.me</h3>
+              </div>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Transform your productivity with intelligent voice-powered
+                note-taking and task management.
               </p>
             </div>
-            <div>
-              <h4 className="text-white font-semibold mb-4">Product</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <Link href="#features" className="hover:text-white">
-                    Features
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#pricing" className="hover:text-white">
-                    Pricing
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Integrations
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    API
-                  </Link>
-                </li>
-              </ul>
+
+            {/* Navigation Links */}
+            <div className="space-y-4">
+              <h4 className="font-semibold text-gray-900 text-sm uppercase tracking-wide">
+                Product
+              </h4>
+              <div className="space-y-3">
+                <Link
+                  href="#how-it-works"
+                  className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
+                >
+                  How it works
+                </Link>
+                <Link
+                  href="#features"
+                  className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
+                >
+                  Features
+                </Link>
+                <Link
+                  href="#pricing"
+                  className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
+                >
+                  Pricing
+                </Link>
+              </div>
             </div>
-            <div>
-              <h4 className="text-white font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Careers
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold mb-4">Support</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Help Center
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Documentation
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Community
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Status
-                  </Link>
-                </li>
-              </ul>
+
+            {/* Company Links */}
+            <div className="space-y-4">
+              <h4 className="font-semibold text-gray-900 text-sm uppercase tracking-wide">
+                Company
+              </h4>
+              <div className="space-y-3">
+                <Link
+                  href="#founder-story"
+                  className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
+                >
+                  Founder story
+                </Link>
+                <Link
+                  href="#"
+                  className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
+                >
+                  Privacy
+                </Link>
+                <Link
+                  href="#"
+                  className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
+                >
+                  Terms of use
+                </Link>
+              </div>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-            <p className="text-gray-400">
-              © 2024 votion.me. All rights reserved.
-            </p>
+
+          {/* Bottom Section */}
+          <div className="mt-12 pt-8 border-t border-gray-100">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <p className="text-sm text-gray-500">
+                © 2025 votion.me. All rights reserved.
+              </p>
+              <div className="flex items-center space-x-6 text-sm text-gray-500">
+                <span>Made with ❤️ for productivity</span>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
