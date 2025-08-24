@@ -845,7 +845,7 @@ export default function Home() {
                 </div>
               )}
               <div className="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-medium mb-6 inline-block">
-                100 voice messages
+                150 voice messages
               </div>
               <a
                 href="https://t.me/votion_assistant_bot"
@@ -858,23 +858,17 @@ export default function Home() {
               <ul className="space-y-4 text-left">
                 <li className="flex items-start">
                   <span className="text-white mr-3 text-lg">✓</span>
-                  <span>Everything in FREE</span>
+                  <span>All features</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-white mr-3 text-lg">✓</span>
-                  <span>Advanced Notion features</span>
+                  <span>
+                    Daily office hours support with Gabriel, the founder
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-white mr-3 text-lg">✓</span>
-                  <span>Priority support</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-white mr-3 text-lg">✓</span>
-                  <span>Usage analytics</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-white mr-3 text-lg">✓</span>
-                  <span>Best for: Regular users, small teams</span>
+                  <span>Powered by GPT-5</span>
                 </li>
               </ul>
             </div>
@@ -891,7 +885,7 @@ export default function Home() {
                 </div>
               )}
               <div className="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-medium mb-6 inline-block">
-                300 voice messages
+                500 voice messages
               </div>
               <a
                 href="https://t.me/votion_assistant_bot"
@@ -904,23 +898,21 @@ export default function Home() {
               <ul className="space-y-4 text-left">
                 <li className="flex items-start">
                   <span className="text-white mr-3 text-lg">✓</span>
-                  <span>Everything in PRO</span>
+                  <span>3x usage included in Pro</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-white mr-3 text-lg">✓</span>
-                  <span>Team collaboration features</span>
+                  <span>All features</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-white mr-3 text-lg">✓</span>
-                  <span>Advanced analytics</span>
+                  <span>
+                    Daily office hours support with Gabriel, the founder
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-white mr-3 text-lg">✓</span>
-                  <span>Custom integrations</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-white mr-3 text-lg">✓</span>
-                  <span>Best for: Power users, growing teams</span>
+                  <span>Powered by GPT-5</span>
                 </li>
               </ul>
             </div>
@@ -937,7 +929,7 @@ export default function Home() {
                 </div>
               )}
               <div className="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-medium mb-6 inline-block">
-                3000 voice messages
+                2000 voice messages
               </div>
               <a
                 href="https://t.me/votion_assistant_bot"
@@ -950,23 +942,21 @@ export default function Home() {
               <ul className="space-y-4 text-left">
                 <li className="flex items-start">
                   <span className="text-white mr-3 text-lg">✓</span>
-                  <span>Everything in PRO+</span>
+                  <span>13x usage included in Pro</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-white mr-3 text-lg">✓</span>
-                  <span>Enterprise features</span>
+                  <span>All features</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-white mr-3 text-lg">✓</span>
-                  <span>Dedicated support</span>
+                  <span>
+                    Daily office hours support with Gabriel, the founder
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-white mr-3 text-lg">✓</span>
-                  <span>Custom solutions</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-white mr-3 text-lg">✓</span>
-                  <span>Best for: Enterprise users, large teams</span>
+                  <span>Powered by GPT-5</span>
                 </li>
               </ul>
             </div>
