@@ -4,7 +4,19 @@ import Link from "next/link";
 import Image from "next/image";
 import { SiNotion, SiTelegram } from "react-icons/si";
 import { useState } from "react";
-import { FiAlertTriangle, FiCheckCircle, FiX, FiCheck } from "react-icons/fi";
+import {
+  FiAlertTriangle,
+  FiCheckCircle,
+  FiX,
+  FiCheck,
+  FiPlus,
+  FiEye,
+  FiRefreshCw,
+  FiTrash2,
+  FiMessageSquare,
+  FiDatabase,
+  FiActivity,
+} from "react-icons/fi";
 
 export default function Home() {
   const [billingCycle, setBillingCycle] = useState("monthly");
@@ -285,11 +297,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl lg:text-5xl xl:text-6xl font-black text-gray-900 leading-tight mb-6">
-              Never lose your{" "}
+              From scattered ideas to{" "}
               <span className="bg-black text-white px-6 py-3 rounded-2xl transform -rotate-1 mx-2">
-                brilliant ideas
-              </span>{" "}
-              again
+                {" "}
+                organized
+              </span>
+              action
             </h2>
             <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Stop the frustration of forgotten thoughts and missed
@@ -469,11 +482,11 @@ export default function Home() {
                     <span className="text-2xl text-white font-bold">1</span>
                   </div>
                   <h3 className="text-2xl font-black text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
-                    Connect Notion
+                    Record Voice
                   </h3>
                   <p className="text-gray-600 text-base leading-relaxed">
-                    Link your Notion workspace with our secure integration.
-                    One-time setup takes less than 2 minutes.
+                    Open Telegram, send a short voice note to the bot describing
+                    a task, idea, or command; it uploads for processing
                   </p>
                 </div>
               </div>
@@ -488,11 +501,11 @@ export default function Home() {
                     <span className="text-2xl text-white font-bold">2</span>
                   </div>
                   <h3 className="text-2xl font-black text-gray-900 mb-4 group-hover:text-purple-600 transition-colors duration-300">
-                    Start Chatting
+                    Transcribe & Parse
                   </h3>
                   <p className="text-gray-600 text-base leading-relaxed">
-                    Open our Telegram bot and start speaking naturally. No
-                    commands to memorize - just talk like you would to a human.
+                    Bot transcribes audio, detects intent and field mappings,
+                    and decides which Notion DB/table to target
                   </p>
                 </div>
               </div>
@@ -507,11 +520,11 @@ export default function Home() {
                     <span className="text-2xl text-white font-bold">3</span>
                   </div>
                   <h3 className="text-2xl font-black text-gray-900 mb-4 group-hover:text-green-600 transition-colors duration-300">
-                    Watch Magic Happen
+                    Execute Action
                   </h3>
                   <p className="text-gray-600 text-base leading-relaxed">
-                    Your voice commands instantly create, edit, and organize
-                    content in Notion. See real-time updates and confirmations.
+                    Create, read, update or delete the specified Notion item
+                    automatically, respecting properties and filters
                   </p>
                 </div>
               </div>
@@ -615,9 +628,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl lg:text-5xl xl:text-6xl font-black text-gray-900 leading-tight mb-6">
-              Everything you can do with your{" "}
+              Features that bring you{" "}
               <span className="bg-black text-white px-6 py-3 rounded-2xl transform rotate-1 mx-2">
-                voice
+                value
               </span>
             </h2>
             <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -631,15 +644,14 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-purple-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
               <div className="relative z-10">
                 <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-blue-500/25">
-                  <span className="text-2xl text-white">✨</span>
+                  <FiPlus className="text-2xl text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
-                  Create Anything
+                  Create Items
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Create new pages, databases, tasks, notes, and more in
-                  seconds. Just say &ldquo;Create a new task for tomorrow&rdquo;
-                  and it&apos;s done.
+                  Turn spoken tasks, notes or meeting actions into new Notion
+                  pages/rows instantly with mapped properties and rich text.
                 </p>
               </div>
             </div>
@@ -648,15 +660,14 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-green-50/30 to-emerald-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
               <div className="relative z-10">
                 <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-green-500/25">
-                  <span className="text-2xl text-white">📖</span>
+                  <FiEye className="text-2xl text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors duration-300">
-                  Read & Search
+                  Read Items
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Find information instantly without navigating through Notion.
-                  Ask &ldquo;Show me all tasks due this week&rdquo; and get
-                  results in seconds.
+                  Ask to hear or preview pages, filtered views, or a task
+                  summary — delivered as voice plus text in Telegram.
                 </p>
               </div>
             </div>
@@ -665,15 +676,15 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-purple-50/30 to-pink-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
               <div className="relative z-10">
                 <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-500/25">
-                  <span className="text-2xl text-white">✏️</span>
+                  <FiRefreshCw className="text-2xl text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors duration-300">
-                  Edit & Update
+                  Update Items
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Update any field with voice commands - faster than finding and
-                  clicking through Notion&apos;s interface. &ldquo;Change the
-                  due date to Friday.&rdquo;
+                  Change titles, dates, statuses or properties by voice; the bot
+                  finds the correct record and applies updates with
+                  confirmation.
                 </p>
               </div>
             </div>
@@ -682,14 +693,14 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-red-50/30 to-rose-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
               <div className="relative z-10">
                 <div className="w-14 h-14 bg-gradient-to-br from-red-500 to-rose-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-red-500/25">
-                  <span className="text-2xl text-white">🗑️</span>
+                  <FiTrash2 className="text-2xl text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-red-600 transition-colors duration-300">
-                  Delete & Archive
+                  Delete Items
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Safely remove or archive items with voice confirmation - no
-                  need to hunt through Notion&apos;s right-click menus.
+                  Remove outdated entries by voice with a safety confirmation
+                  step to prevent accidental data loss.
                 </p>
               </div>
             </div>
@@ -698,15 +709,14 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-yellow-50/30 to-amber-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
               <div className="relative z-10">
                 <div className="w-14 h-14 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-yellow-500/25">
-                  <span className="text-2xl text-white">🏷️</span>
+                  <FiMessageSquare className="text-2xl text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-amber-600 transition-colors duration-300">
-                  Smart Organization
+                  Natural Language
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Automatically tag, categorize, and organize content in one
-                  voice command. &ldquo;Add this to my work projects with high
-                  priority.&rdquo;
+                  Understand real commands: set reminders, assign people, add
+                  tags, or describe complex tasks without rigid templates.
                 </p>
               </div>
             </div>
@@ -715,15 +725,14 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
               <div className="relative z-10">
                 <div className="w-14 h-14 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-indigo-500/25">
-                  <span className="text-2xl text-white">🔗</span>
+                  <FiDatabase className="text-2xl text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors duration-300">
-                  Cross-Linking
+                  Multi-DB Support
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Create connections between pages and databases instantly.
-                  &ldquo;Link this task to the project roadmap&rdquo; - no more
-                  searching through Notion.
+                  Link multiple Notion databases and target them by name or
+                  shortcut; the bot routes entries to the correct table.
                 </p>
               </div>
             </div>
@@ -732,15 +741,14 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-pink-50/30 to-rose-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
               <div className="relative z-10">
                 <div className="w-14 h-14 bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-pink-500/25">
-                  <span className="text-2xl text-white">📅</span>
+                  <SiTelegram className="text-2xl text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-pink-600 transition-colors duration-300">
-                  Date & Time Magic
+                  Telegram Interface
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Natural date parsing that&apos;s faster than Notion&apos;s
-                  date picker. &ldquo;Set reminder for 3 days from now&rdquo; -
-                  understands natural language.
+                  Use the familiar Telegram app for voice, confirmations, and
+                  quick reviews — no extra apps or extensions.
                 </p>
               </div>
             </div>
@@ -749,32 +757,14 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-teal-50/30 to-cyan-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
               <div className="relative z-10">
                 <div className="w-14 h-14 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-teal-500/25">
-                  <span className="text-2xl text-white">📊</span>
+                  <FiActivity className="text-2xl text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors duration-300">
-                  Database Operations
+                  Activity Log
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Filter, sort, and query databases with voice - bypass
-                  Notion&apos;s complex filter interface. &ldquo;Show me all
-                  high-priority tasks assigned to me.&rdquo;
-                </p>
-              </div>
-            </div>
-
-            <div className="group relative overflow-hidden bg-gradient-to-br from-white to-gray-50 p-8 rounded-3xl border border-gray-100/50 hover:border-gray-200/80 transition-all duration-500 hover:shadow-2xl hover:shadow-gray-100/50 hover:-translate-y-2">
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-50/30 to-red-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
-              <div className="relative z-10">
-                <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-orange-500/25">
-                  <span className="text-2xl text-white">🔄</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors duration-300">
-                  Bulk Operations
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Handle multiple items at once without Notion&apos;s
-                  multi-select interface. &ldquo;Mark all completed tasks as
-                  done&rdquo; - one command, instant results.
+                  Searchable log of voice commands and resulting Notion changes
+                  for audits, rollbacks, and accountability.
                 </p>
               </div>
             </div>
@@ -802,10 +792,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
-              The only AI assistant
+              Never lose{" "}
               <span className="block bg-black text-white px-8 py-3 rounded-3xl transform -rotate-1 inline-block mt-2">
-                you&apos;ll ever hire
-              </span>
+                important
+              </span>{" "}
+              ideas again
             </h2>
           </div>
 
@@ -1013,29 +1004,31 @@ export default function Home() {
                   </span>
                 </div>
                 <h2 className="text-4xl lg:text-5xl font-black text-gray-900 leading-tight">
-                  I built this because{" "}
+                  I built this because I was{" "}
                   <span className="bg-black text-white px-4 py-2 rounded-xl">
-                    I was losing ideas too
-                  </span>
+                    losing ideas
+                  </span>{" "}
+                  too
                 </h2>
                 <p className="text-lg lg:text-xl text-gray-600 leading-relaxed">
-                  Last year, I had a breakthrough idea while stuck in traffic.
-                  By the time I got home, it was completely gone. I was furious.
+                  Last year while I was doing a run, I had an important idea to
+                  execute. By the time I got home, it was completely gone. I was
+                  furious.
                 </p>
               </div>
 
               <div className="space-y-6">
-                <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
+                {/* <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
                   <p className="text-gray-700 italic leading-relaxed">
                     &ldquo;I&apos;m not losing another brilliant idea because I
                     can&apos;t type fast enough.&rdquo;
                   </p>
-                </div>
+                </div> */}
 
                 <p className="text-gray-600 leading-relaxed">
-                  So I built votion.me. Now I can just speak my thoughts and
-                  they go straight to Notion. No more lost ideas. No more
-                  frustration.
+                  So I built Votion to solve this problem. Now I can just speak
+                  my thoughts and they go straight to Notion, organized. No more
+                  lost ideas. No more frustration.
                 </p>
 
                 <div className="flex items-center space-x-4">
@@ -1050,9 +1043,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Gabriel</p>
-                    <p className="text-sm text-gray-600">
-                      The guy who was tired of losing ideas
-                    </p>
+                    <p className="text-sm text-gray-600">Founder of Votion</p>
                   </div>
                 </div>
               </div>
@@ -1070,7 +1061,7 @@ export default function Home() {
                       </div>
                       <div>
                         <h4 className="font-semibold text-gray-900 mb-2">
-                          Lost an idea in traffic
+                          Lost an idea while running
                         </h4>
                         <p className="text-sm text-gray-600">
                           Was furious about it
@@ -1084,7 +1075,7 @@ export default function Home() {
                       </div>
                       <div>
                         <h4 className="font-semibold text-gray-900 mb-2">
-                          Built the solution
+                          Built a solution
                         </h4>
                         <p className="text-sm text-gray-600">
                           Voice + Notion integration
@@ -1098,7 +1089,7 @@ export default function Home() {
                       </div>
                       <div>
                         <h4 className="font-semibold text-gray-900 mb-2">
-                          Never lost an idea again
+                          Never lost any idea again
                         </h4>
                         <p className="text-sm text-gray-600">
                           Now helping others too
@@ -1132,11 +1123,12 @@ export default function Home() {
       <section className="py-32 bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Productivity?
+            Don&apos;t let the next idea vanish
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of professionals who have already revolutionized
-            their workflow with votion.me
+            Start capturing ideas the moment they happen, link Notion, speak
+            into into Telegram, and watch tasks appear. Try it free and never
+            lose momentum again
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
