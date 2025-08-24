@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { SiNotion, SiTelegram } from "react-icons/si";
 import { useState } from "react";
+import { FiAlertTriangle, FiCheckCircle, FiX, FiCheck } from "react-icons/fi";
 
 export default function Home() {
   const [billingCycle, setBillingCycle] = useState("monthly");
@@ -299,145 +300,128 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Before */}
             <div className="group">
-              <div className="relative overflow-hidden bg-gradient-to-br from-white to-red-50/30 p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-red-100/50 hover:border-red-200/80 hover:-translate-y-2">
-                <div className="absolute inset-0 bg-gradient-to-br from-red-50/20 to-rose-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+              <div className="relative overflow-hidden bg-gradient-to-br from-rose-50 via-red-50 to-orange-50 p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-rose-200/60 hover:border-rose-300/80 hover:-translate-y-2">
+                <div className="absolute inset-0 bg-gradient-to-br from-rose-100/20 via-transparent to-orange-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
                 <div className="relative z-10">
-                  <div className="text-center mb-10">
-                    <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-rose-600 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-red-500/25">
-                      <span className="text-3xl">😤</span>
-                    </div>
-                    <h3 className="text-3xl font-black text-red-800 mb-4 group-hover:text-red-700 transition-colors duration-300">
-                      The Daily Struggle
+                  <div className="mb-8">
+                    <h3 className="text-2xl font-bold text-slate-800 mb-6">
+                      What happens
                     </h3>
                   </div>
-                  <ul className="space-y-5 text-red-700 text-base">
-                    <li className="flex items-start group/item">
-                      <span className="mr-4 text-red-500 group-hover/item:scale-125 transition-transform duration-200 text-lg">
-                        •
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between group/item">
+                      <span className="text-slate-600 group-hover/item:text-slate-700 transition-colors duration-200">
+                        Idea pops up while driving
                       </span>
-                      <span className="group-hover/item:text-red-800 transition-colors duration-200 leading-relaxed">
-                        "I had a great idea while driving, but I can&apos;t type
-                        it down safely"
+                      <span className="text-rose-600 font-semibold group-hover/item:text-rose-700 transition-colors duration-200">
+                        → forgotten
                       </span>
-                    </li>
-                    <li className="flex items-start group/item">
-                      <span className="mr-4 text-red-500 group-hover/item:scale-125 transition-transform duration-200 text-lg">
-                        •
+                    </div>
+                    <div className="flex items-center justify-between group/item">
+                      <span className="text-slate-600 group-hover/item:text-slate-700 transition-colors duration-200">
+                        Random voice notes everywhere
                       </span>
-                      <span className="group-hover/item:text-red-800 transition-colors duration-200 leading-relaxed">
-                        "My brilliant thoughts disappear before I can open
-                        Notion"
+                      <span className="text-rose-600 font-semibold group-hover/item:text-rose-700 transition-colors duration-200">
+                        → never organized
                       </span>
-                    </li>
-                    <li className="flex items-start group/item">
-                      <span className="mr-4 text-red-500 group-hover/item:scale-125 transition-transform duration-200 text-lg">
-                        •
+                    </div>
+                    <div className="flex items-center justify-between group/item">
+                      <span className="text-slate-600 group-hover/item:text-slate-700 transition-colors duration-200">
+                        Stop what you&apos;re doing
                       </span>
-                      <span className="group-hover/item:text-red-800 transition-colors duration-200 leading-relaxed">
-                        "I&apos;m in a meeting and can&apos;t type without being
-                        rude"
+                      <span className="text-rose-600 font-semibold group-hover/item:text-rose-700 transition-colors duration-200">
+                        → open laptop/phone
                       </span>
-                    </li>
-                    <li className="flex items-start group/item">
-                      <span className="mr-4 text-red-500 group-hover/item:scale-125 transition-transform duration-200 text-lg">
-                        •
+                    </div>
+                    <div className="flex items-center justify-between group/item">
+                      <span className="text-slate-600 group-hover/item:text-slate-700 transition-colors duration-200">
+                        Half-remembered details
                       </span>
-                      <span className="group-hover/item:text-red-800 transition-colors duration-200 leading-relaxed">
-                        "My notes are everywhere - phone, laptop, paper, but
-                        never in Notion"
+                      <span className="text-rose-600 font-semibold group-hover/item:text-rose-700 transition-colors duration-200">
+                        → missing context
                       </span>
-                    </li>
-                    <li className="flex items-start group/item">
-                      <span className="mr-4 text-red-500 group-hover/item:scale-125 transition-transform duration-200 text-lg">
-                        •
+                    </div>
+                    <div className="flex items-center justify-between group/item">
+                      <span className="text-slate-600 group-hover/item:text-slate-700 transition-colors duration-200">
+                        Reconstructing later
                       </span>
-                      <span className="group-hover/item:text-red-800 transition-colors duration-200 leading-relaxed">
-                        "I spend more time organizing than actually working"
+                      <span className="text-rose-600 font-semibold group-hover/item:text-rose-700 transition-colors duration-200">
+                        → wasted time
                       </span>
-                    </li>
-                    <li className="flex items-start group/item">
-                      <span className="mr-4 text-red-500 group-hover/item:scale-125 transition-transform duration-200 text-lg">
-                        •
-                      </span>
-                      <span className="group-hover/item:text-red-800 transition-colors duration-200 leading-relaxed">
-                        "Navigating through Notion menus takes forever - I need
-                        things faster"
-                      </span>
-                    </li>
-                  </ul>
+                    </div>
+                    <div className="pt-4 border-t border-rose-200/60 mt-6">
+                      <div className="flex items-center justify-between">
+                        <span className="text-slate-800 font-bold text-lg">
+                          = Hours of frustration
+                        </span>
+                        <span className="text-rose-500 text-2xl">😤</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* After */}
             <div className="group">
-              <div className="relative overflow-hidden bg-gradient-to-br from-white to-green-50/30 p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-green-100/50 hover:border-green-200/80 hover:-translate-y-2">
-                <div className="absolute inset-0 bg-gradient-to-br from-green-50/20 to-emerald-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+              <div className="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-emerald-200/60 hover:border-emerald-300/80 hover:-translate-y-2">
+                <div className="absolute inset-0 bg-gradient-to-br from-emerald-100/20 via-transparent to-teal-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
                 <div className="relative z-10">
-                  <div className="text-center mb-10">
-                    <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-green-500/25">
-                      <span className="text-3xl">🎯</span>
-                    </div>
-                    <h3 className="text-3xl font-black text-green-800 mb-4 group-hover:text-green-700 transition-colors duration-300">
-                      The votion.me Solution
+                  <div className="mb-8">
+                    <h3 className="text-2xl font-bold text-slate-800 mb-6">
+                      With Votion:
                     </h3>
                   </div>
-                  <ul className="space-y-5 text-green-700 text-base">
-                    <li className="flex items-start group/item">
-                      <span className="mr-4 text-green-500 group-hover/item:scale-125 transition-transform duration-200 text-lg">
-                        •
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between group/item">
+                      <span className="text-slate-600 group-hover/item:text-slate-700 transition-colors duration-200">
+                        Speak an idea
                       </span>
-                      <span className="group-hover/item:text-green-800 transition-colors duration-200 leading-relaxed">
-                        "Just speak your mind - it goes straight to Notion while
-                        you drive"
+                      <span className="text-emerald-600 font-semibold group-hover/item:text-emerald-700 transition-colors duration-200">
+                        → saved instantly
                       </span>
-                    </li>
-                    <li className="flex items-start group/item">
-                      <span className="mr-4 text-green-500 group-hover/item:scale-125 transition-transform duration-200 text-lg">
-                        •
+                    </div>
+                    <div className="flex items-center justify-between group/item">
+                      <span className="text-slate-600 group-hover/item:text-slate-700 transition-colors duration-200">
+                        Voice inputs
                       </span>
-                      <span className="group-hover/item:text-green-800 transition-colors duration-200 leading-relaxed">
-                        "Your voice becomes your fastest way to capture ideas
-                        anywhere"
+                      <span className="text-emerald-600 font-semibold group-hover/item:text-emerald-700 transition-colors duration-200">
+                        → structured entries
                       </span>
-                    </li>
-                    <li className="flex items-start group/item">
-                      <span className="mr-4 text-green-500 group-hover/item:scale-125 transition-transform duration-200 text-lg">
-                        •
+                    </div>
+                    <div className="flex items-center justify-between group/item">
+                      <span className="text-slate-600 group-hover/item:text-slate-700 transition-colors duration-200">
+                        Add/update items
                       </span>
-                      <span className="group-hover/item:text-green-800 transition-colors duration-200 leading-relaxed">
-                        "Stay engaged in meetings while secretly organizing your
-                        thoughts"
+                      <span className="text-emerald-600 font-semibold group-hover/item:text-emerald-700 transition-colors duration-200">
+                        → hands-free
                       </span>
-                    </li>
-                    <li className="flex items-start group/item">
-                      <span className="mr-4 text-green-500 group-hover/item:scale-125 transition-transform duration-200 text-lg">
-                        •
+                    </div>
+                    <div className="flex items-center justify-between group/item">
+                      <span className="text-slate-600 group-hover/item:text-slate-700 transition-colors duration-200">
+                        Every entry
                       </span>
-                      <span className="group-hover/item:text-green-800 transition-colors duration-200 leading-relaxed">
-                        "Everything automatically organized in your Notion
-                        database"
+                      <span className="text-emerald-600 font-semibold group-hover/item:text-emerald-700 transition-colors duration-200">
+                        → full context
                       </span>
-                    </li>
-                    <li className="flex items-start group/item">
-                      <span className="mr-4 text-green-500 group-hover/item:scale-125 transition-transform duration-200 text-lg">
-                        •
+                    </div>
+                    <div className="flex items-center justify-between group/item">
+                      <span className="text-slate-600 group-hover/item:text-slate-700 transition-colors duration-200">
+                        Less admin work
                       </span>
-                      <span className="group-hover/item:text-green-800 transition-colors duration-200 leading-relaxed">
-                        "Focus on what matters - let votion.me handle the
-                        organization"
+                      <span className="text-emerald-600 font-semibold group-hover/item:text-emerald-700 transition-colors duration-200">
+                        → more execution
                       </span>
-                    </li>
-                    <li className="flex items-start group/item">
-                      <span className="mr-4 text-green-500 group-hover/item:scale-125 transition-transform duration-200 text-lg">
-                        •
-                      </span>
-                      <span className="group-hover/item:text-green-800 transition-colors duration-200 leading-relaxed">
-                        "10x faster than clicking through Notion menus - just
-                        say what you want"
-                      </span>
-                    </li>
-                  </ul>
+                    </div>
+                    <div className="pt-4 border-t border-emerald-200/60 mt-6">
+                      <div className="flex items-center justify-between">
+                        <span className="text-slate-800 font-bold text-lg">
+                          = Seamless productivity
+                        </span>
+                        <span className="text-emerald-500 text-2xl">✨</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1082,7 +1066,7 @@ export default function Home() {
                     {/* Timeline Story Elements */}
                     <div className="flex items-start space-x-4">
                       <div className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                        <span className="text-white text-sm font-bold">😤</span>
+                        <FiX className="text-white text-sm" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-gray-900 mb-2">
@@ -1096,7 +1080,7 @@ export default function Home() {
 
                     <div className="flex items-start space-x-4">
                       <div className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                        <span className="text-white text-sm font-bold">💡</span>
+                        <FiCheck className="text-white text-sm" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-gray-900 mb-2">
@@ -1110,7 +1094,7 @@ export default function Home() {
 
                     <div className="flex items-start space-x-4">
                       <div className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                        <span className="text-white text-sm font-bold">🎯</span>
+                        <FiCheckCircle className="text-white text-sm" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-gray-900 mb-2">
@@ -1254,7 +1238,7 @@ export default function Home() {
                 © 2025 votion.me. All rights reserved.
               </p>
               <div className="flex items-center space-x-6 text-sm text-gray-500">
-                <span>Made with ❤️ for productivity</span>
+                <span>Made in France 🇫🇷 with ❤️</span>
               </div>
             </div>
           </div>
