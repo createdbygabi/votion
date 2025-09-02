@@ -6,6 +6,7 @@ export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const code = searchParams.get("code");
   const encodedState = searchParams.get("state"); // This contains the base64 encoded Telegram user_id
+  let telegramUserId; // Declare at function scope so it's available in catch block
 
   if (!code) {
     return NextResponse.redirect(new URL("/auth/error", request.url));
@@ -18,9 +19,7 @@ export async function GET(request) {
 
   try {
     // Decode the base64 encoded state to get the actual Telegram user ID
-    const telegramUserId = parseInt(
-      Buffer.from(encodedState, "base64").toString()
-    );
+    telegramUserId = parseInt(Buffer.from(encodedState, "base64").toString());
 
     if (!telegramUserId || isNaN(telegramUserId)) {
       console.error(
@@ -32,6 +31,8 @@ export async function GET(request) {
     console.log(
       `🔍 Decoded Telegram user ID: ${telegramUserId} from state: ${encodedState}`
     );
+
+    console.log(`🔍 Using redirect_uri: ${process.env.NOTION_REDIRECT_URI}`);
 
     // Exchange code for token
     const response = await fetch("https://api.notion.com/v1/oauth/token", {
