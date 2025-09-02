@@ -50,7 +50,18 @@ export async function GET(request) {
     });
 
     if (!response.ok) {
-      throw new Error("Token exchange failed");
+      const errorText = await response.text();
+      console.error("Token exchange failed:", {
+        status: response.status,
+        statusText: response.statusText,
+        error: errorText,
+        code: code,
+        redirect_uri: process.env.NOTION_REDIRECT_URI,
+        telegramUserId: telegramUserId,
+      });
+      throw new Error(
+        `Token exchange failed: ${response.status} - ${errorText}`
+      );
     }
 
     const data = await response.json();
@@ -112,7 +123,22 @@ export async function GET(request) {
     // Redirect to success page
     return NextResponse.redirect(new URL("/auth/success", request.url));
   } catch (error) {
-    console.error("OAuth error:", error);
-    return NextResponse.redirect(new URL("/auth/error", request.url));
+    console.error("OAuth error:", {
+      message: error.message,
+      stack: error.stack,
+      telegramUserId: telegramUserId,
+      code: code,
+      encodedState: encodedState,
+    });
+
+    // Return a JSON response with error details instead of redirecting
+    return NextResponse.json(
+      {
+        error: "OAuth failed",
+        details: error.message,
+        telegramUserId: telegramUserId,
+      },
+      { status: 500 }
+    );
   }
 }
